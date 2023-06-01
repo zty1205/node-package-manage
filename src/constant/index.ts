@@ -1,0 +1,1 @@
+export const NODE_CORE_PACK_VERSION = '18.16.0'

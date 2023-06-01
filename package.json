@@ -1,0 +1,39 @@
+{
+  "name": "package-manage",
+  "version": "1.0.0",
+  "description": "npm, yarn, pnpm, 仅学习使用",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node test/index.ts",
+    "gen": "ts-node src/index.ts clear",
+    "gen:file": "ts-node src/index.ts no_run",
+    "gen:npm": "ts-node src/index.ts npm",
+    "gen:yarn": "ts-node src/index.ts yarn",
+    "gen:pnpm": "ts-node src/index.ts pnpm",
+    "dev": "npm run gen:file",
+    "build": "npm run gen",
+    "pre": "ts-node src/prepare.ts",
+    "analyze": "ts-node src/analyze.ts",
+    "all": "npm run gen && npm run analyze"
+  },
+  "keywords": [],
+  "author": "zty",
+  "repository": {
+    "url": "https://github.com/zty1205/node-package-manage"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/prettier": "^2.7.2",
+    "@types/shelljs": "^0.8.12",
+    "minimist": "^1.2.8",
+    "pnpm": "^8.6.0",
+    "prettier": "^2.8.8",
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">= 18.16.0"
+  }
+}
